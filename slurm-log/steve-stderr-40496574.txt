@@ -1,0 +1,1 @@
+mkdir: cannot create directory ‘largedata/lab5/’: File exists
