@@ -93,7 +93,8 @@ table(f2[,1])
 Note that in this F2 population, the SNP coding is `-1, 0, 1` for $A_1A1$, $A_1A_2$, and $A_2A_2$.
 
 ```{r, eval=FALSE}
-table(f2[,6])
+table(f2[,9])
+# Mt_60446
 ```
 
 ---
@@ -104,9 +105,9 @@ table(f2[,6])
 
 ```{r, eval=FALSE}
 # For A1 allele
-p <- (52*2+92)/((52+92+56)*2)
+p <- (47*2+101)/400
 # For A2 allele
-q <- (56*2+92)/((52+92+56)*2)
+q <- (52*2+101)/400
 ```
 
 --
@@ -178,11 +179,11 @@ Let's find out $a$ and $d$ at a specific Marker `Mt_24242`:
 
 ```{r, eval=FALSE}
 library(ggplot2)
-ggplot(gp, aes(x=as.factor(Mt_24242), y=height, color=as.factor(Mt_24242))) +
+ggplot(gp, aes(x=as.factor(Mt_60446), y=height, color=as.factor(Mt_60446))) +
     geom_boxplot() +
     geom_jitter(color="black", size=1, alpha=0.9) +
     scale_color_manual(values=c("#E69F00", "#56B4E9", "#fe6f5e"))+
-    labs(title="Mt_24242", y="Plant Height", x = "Genotype")+
+    labs(title="Mt_60446", y="Plant Height", x = "Genotype")+
     theme_classic() +
     guides(color=FALSE) +
     theme(plot.title = element_text(size=20, face = "bold"), 
